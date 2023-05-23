@@ -38,7 +38,7 @@ class Simplex:
                         negative_counter += 1
                         if negative_counter == len(x_inds):
                             return -1, -1
-                    elif (ratio := round(
+                    elif 0 < (ratio := round(
                             table.point[x_inds[row]] / table.table[row][col], SYSTEM_ACCURACY
                     )) < min_ratio or min_ratio == -1:
                         min_ratio = ratio

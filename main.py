@@ -76,7 +76,7 @@ if __name__ == '__main__':
     confines_values: list[float]
     start_point: list[float]
     try:
-        with open("input.json", "r") as json_file:
+        with open("input6.json", "r") as json_file:
             input_dict = json.load(json_file)
             function = input_dict["F"]
             confines = input_dict["A"]
@@ -84,7 +84,7 @@ if __name__ == '__main__':
             start_point = input_dict["X"]
         error_check(function, confines, confines_values, start_point)
     except FileNotFoundError as fnfe:
-        print(f"Файл input.json не найден.\n{fnfe}")
+        print(f"Файл input1.json не найден.\n{fnfe}")
         sys.exit(ERROR_CODE)
     except ValueError as ve:
         print(ve)
